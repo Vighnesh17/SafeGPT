@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeGPT - Secure Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/chat" class="active">Chat</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Secure Chat</h1>
+        <div id="chat-container">
+            <div id="chat-messages"></div>
+            <form id="chat-form">
+                <textarea id="user-input" placeholder="Enter your prompt here..." rows="3"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 SafeGPT. All rights reserved.</p>
+    </footer>
+    <script src="{{ url_for('static', path='/js/chat.js') }}"></script>
+</body>
+</html>
